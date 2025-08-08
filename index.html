@@ -47,7 +47,7 @@
       border-radius: 12px;
       padding: 1.2rem;
       box-shadow: 3px 3px 0 #264653;
-      animation: fadeIn 1s ease-in;
+      animation: sketchyEnter 0.8s ease-out;
     }
 
     section h2 {
@@ -88,9 +88,23 @@
       transform: scale(1.05);
     }
 
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
+    .svg-img {
+      margin-bottom: 1rem;
+    }
+
+    svg text {
+      font-family: 'Shadows Into Light', cursive;
+    }
+
+    @keyframes sketchyEnter {
+      from {
+        opacity: 0;
+        transform: rotate(-1deg) translateY(20px) scale(0.98);
+      }
+      to {
+        opacity: 1;
+        transform: rotate(0deg) translateY(0) scale(1);
+      }
     }
 
     @media(min-width: 600px) {
@@ -109,28 +123,80 @@
   </header>
 
   <section>
+    <div class="svg-img">
+      <svg width="100%" height="120px" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+        <style>
+          .sketch { fill: none; stroke: #333; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+          .highlight { stroke: #2a9d8f; }
+        </style>
+        <path class="sketch" d="M100,100 c50,-80 150,80 200,0 s150,-80 200,0" />
+        <circle class="sketch highlight" cx="150" cy="100" r="8" />
+        <circle class="sketch highlight" cx="250" cy="100" r="8" />
+        <circle class="sketch highlight" cx="350" cy="100" r="8" />
+        <text x="180" y="180" font-size="18" fill="#264653">語意進化！</text>
+      </svg>
+    </div>
     <h2>🧠 更懂你的語意</h2>
-    <p>GPT-5 對自然語言的理解更精準，能夠<strong class="highlight">正確掌握上下文</strong>、隱含意圖與情緒語氣。</p>
+    <p>GPT-5 對自然語言的理解更精準，能夠 <span class="highlight">正確掌握上下文</span>、隱含意圖與情緒語氣。</p>
   </section>
 
   <section>
+    <div class="svg-img">
+      <svg width="100%" height="100px" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+        <style>
+          .sketch { fill: none; stroke: #333; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+          .highlight { stroke: #e9c46a; }
+        </style>
+        <rect x="100" y="60" width="400" height="80" rx="15" ry="15" class="sketch highlight" />
+        <text x="160" y="115" font-size="20" fill="#264653">圖文理解全面升級！</text>
+      </svg>
+    </div>
     <h2>📷 圖像處理再升級</h2>
-    <p>支援<strong class="highlight">多模態輸入</strong>，圖片辨識、圖文整合回覆能力遠超 GPT-4。</p>
+    <p>支援 <span class="highlight">多模態輸入</span>，圖片辨識、圖文整合回覆能力遠超 GPT-4。</p>
   </section>
 
   <section>
+    <div class="svg-img">
+      <svg width="100%" height="100px" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+        <style>
+          .sketch { fill: none; stroke: #333; stroke-width: 3; }
+        </style>
+        <line x1="100" y1="100" x2="500" y2="100" class="sketch" />
+        <circle cx="150" cy="100" r="10" stroke="#e76f51" stroke-width="3" fill="#fefae0" />
+        <circle cx="300" cy="100" r="10" stroke="#e76f51" stroke-width="3" fill="#fefae0" />
+        <circle cx="450" cy="100" r="10" stroke="#e76f51" stroke-width="3" fill="#fefae0" />
+      </svg>
+    </div>
     <h2>⏱ 回應速度提升</h2>
-    <p>推理效能優化，處理複雜問題時<strong class="highlight">速度更快</strong>、延遲更低。</p>
+    <p>推理效能優化，處理複雜問題時 <span class="highlight">速度更快</span>、延遲更低。</p>
   </section>
 
   <section>
+    <div class="svg-img">
+      <svg width="100%" height="100px" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+        <style>
+          .sketch { fill: none; stroke: #333; stroke-width: 3; }
+        </style>
+        <path class="sketch" d="M100,150 Q200,50 300,150 T500,150" />
+        <text x="190" y="70" font-size="20" fill="#2a9d8f">長記憶力！</text>
+      </svg>
+    </div>
     <h2>🔍 記憶力更強</h2>
-    <p>能<strong class="highlight">記住更長篇幅</strong>的上下文，對長時間對話與文件分析表現出色。</p>
+    <p>能 <span class="highlight">記住更長篇幅</span> 的上下文，對長時間對話與文件分析表現出色。</p>
   </section>
 
   <section>
+    <div class="svg-img">
+      <svg width="100%" height="100px" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+        <style>
+          .sketch { fill: none; stroke: #333; stroke-width: 3; }
+        </style>
+        <path class="sketch" d="M100,100 C200,50 400,150 500,100" />
+        <text x="170" y="60" font-size="18" fill="#e76f51">邏輯推理超強</text>
+      </svg>
+    </div>
     <h2>🤖 更接近「類人」邏輯</h2>
-    <p>GPT-5 更擅長<strong class="highlight">推理、多步驟邏輯與決策建議</strong>，具備接近人類專家的思考模式。</p>
+    <p>GPT-5 更擅長 <span class="highlight">推理、多步驟邏輯與決策建議</span>，具備接近人類專家的思考模式。</p>
   </section>
 
   <div class="cta">
